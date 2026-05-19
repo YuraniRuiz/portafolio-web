@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- CONFIGURACIÓN BÁSICA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TÍTULO DE LA PÁGINA -->
+    <title>Portafolio Yurani</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- TIPOGRAFÍA -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* ESTILO GENERAL DE LA PÁGINA */
+        body{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Barra de navegacion= */
+
+        .barra-navegacion{
+            background-color: #111827;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .contenedor-navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LOGO */
+        .imagen-logo{
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+        }
+
+        /* BOTONES DEL MENÚ */
+        .boton-menu{
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+
+    border: 1px solid white;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+       .boton-menu:hover{
+       background-color: white;
+       color: black;
+}
+
+        /* Seccion principal  */
+
+        .seccion-principal{
+
+            height: 100vh;
+
+            background:
+            linear-gradient(rgba(31,101,205,0.6),
+            rgba(89,7,220,0.6)),
+            url('Presentacion.jpeg');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .titulo-principal{
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .texto-principal{
+            font-size: 25px;
+        }
+
+        /* BOTONES PRINCIPALES */
+        .contenedor-botones{
+            margin-top: 20px;
+        }
+
+        .boton-blanco{
+            background-color: white;
+            color: black;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .boton-descargar{
+            border: 1px solid white;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* generales= */
+
+        .seccion{
+            padding: 80px 20px;
+        }
+
+        .titulo-seccion{
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        /* sobre mi */
+
+        .texto-sobre-mi{
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Habilidades */
+        .contenedor-habilidades{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .caja-habilidad{
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* logo- habilidades*/
+
+        .seccion-logos{
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contenedor-logos{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .logo-tecnologia{
+            width: 80px;
+        }
+
+        /* Proyectos */
+
+        .fondo-gris{
+            background-color: #f5f5f5;
+        }
+
+        .tarjeta-proyecto{
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+
+        /* Formulario */
+
+        .formulario-contacto{
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .campo-formulario{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .boton-enviar{
+            width: 100%;
+            padding: 12px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* Footer= */
+
+        .footer{
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--Barra superior-->
+
+    <nav class="barra-navegacion">
+
+        <div class="container contenedor-navbar">
+
+            <!-- LOGO -->
+            <img src="logo.png" alt="Logo Yurani" class="imagen-logo">
+
+            <!-- BOTONES -->
+          <!-- NAVBAR BOOTSTRAP -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <div class="container">
+
+    <!-- BOTÓN RESPONSIVE -->
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#menu">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <!-- MENÚ -->
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#inicio">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#proyectos">Proyectos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+    </nav>
+
+    <!--seccion principal-->
+
+    <section class="seccion-principal">
+
+        <h1 class="titulo-principal">
+            Hola, soy
+            <span>Yelsin Yurani Gomez Ruiz</span>
+        </h1>
+
+         <p class="descripcion">
+        Apasionada por la tecnología, el desarrollo web,
+        las bases de datos y la ciberseguridad.
+        </p>
+
+        <div class="contenedor-botones">
+
+            <!-- Boton ver proyectos -->
+            <a href="#proyectos" class="boton-blanco">
+                Ver proyectos
+            </a>
+
+            <!-- Boton hoja de vida -->
+            <a href="Habilidades imagenes/Hoja de vida Yuri.pdf"
+               download
+               class="boton-descargar">
+
+               Descargar Hoja de Vida
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!--Sobre mi-->
+
+    <section id="sobre-mi" class="seccion">
+
+        <h2 class="titulo-seccion">
+            Sobre mí
+        </h2>
+
+        <p class="texto-sobre-mi">
+
+               Soy Yelsin Yurani Gómez Ruiz, estudiante de Ingeniería de Sistemas con formación técnica en mantenimiento de bases de datos y
+                conocimientos en desarrollo web, análisis de información y soluciones tecnológicas. Me apasiona la tecnología, el aprendizaje
+                 constante y áreas como la ciberseguridad, la inteligencia artificial y el desarrollo de software. Me caracterizo por ser
+                  una persona responsable, comprometida y orientada al crecimiento profesional y la innovación.
+
+
+
+        </p>
+
+        <!-- HABILIDADES -->
+        <div class="contenedor-habilidades">
+
+            <div class="caja-habilidad">
+                Bases de datos
+            </div>
+
+            <div class="caja-habilidad">
+                Desarrollo web
+            </div>
+
+            <div class="caja-habilidad">
+                 Análisis
+            </div>
+
+            <div class="caja-habilidad">
+                Trabajo en equipo
+            </div>
+
+            <div class="caja-habilidad">
+                Liderazgo
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Logos habilidades tecnologicas -->
+
+    <section class="seccion-logos">
+
+        <h2 class="titulo-seccion">
+            Habilidades Tecnológicas
+        </h2>
+
+        <div class="contenedor-logos">
+
+            <img src="Habilidades imagenes/IMG JS.webp"
+                 alt="JavaScript"
+                 class="logo-tecnologia">
+
+            <img src="Habilidades imagenes/IMG PYTHON.webp"
+                 alt="Python"
+                 class="logo-tecnologia">
+
+            <img src="Habilidades imagenes/IMG MSQL.webp"
+                 alt="MySQL"
+                 class="logo-tecnologia">
+
+        </div>
+
+    </section>
+
+    <!--Proyectos-->
+
+    <section id="proyectos" class="seccion fondo-gris">
+
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Proyectos
+            </h2>
+
+            <div class="row g-4">
+
+                <!-- PROYECTO 1 -->
+                <div class="col-md-6">
+
+                    <div class="tarjeta-proyecto">
+
+                        <h4>Alcaldia de Sasaima</h4>
+
+                        <p>
+                            Durante mi práctica profesional en la Alcaldía Municipal de Sasaima desarrollé un gestor
+                             de documentación utilizando Python y una base de datos integrada. Esta solución permitió 
+                             optimizar la organización y búsqueda de documentos, facilitando el acceso rápido a la información 
+                             y mejorando la eficiencia en la gestión documental.
+
+                        </p>
+                        <p>
+                 <strong>Ubicación:</strong>
+                  Sasaima, Cundinamarca
+                        </p>
+
+<iframe
+    src="https://www.google.com/maps?q=Sasaima,Cundinamarca&output=embed"
+    width="100%"
+    height="250"
+    style="border:0; border-radius:12px;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+
+                    </div>
+
+                </div>
+
+                <!-- PROYECTO 2 -->
+                <div class="col-md-6">
+
+                    <div class="tarjeta-proyecto">
+
+                        <h4>Fundacion Zua </h4>
+
+                        <p>
+                            Desde enero de 2022 hago parte de la Fundación Zuá como voluntaria, participando en labores
+                             sociales y brindando acompañamiento terapéutico a jóvenes. Esta experiencia me ha permitido
+                              fortalecer habilidades humanas y de comunicación, mientras continúo creciendo tanto a nivel
+                               personal como profesional.
+
+                        </p>
+                        <p>
+                      <strong>Ubicación:</strong>
+                       Fundaciòn Zua
+                      </p>
+
+<iframe
+     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d322645.4241496954!2d-74.50806626977875!3d4.775648543738953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9db5e95cb835%3A0x9b237131a208fb9!2zRnVuZGFjacOzbiBadcOh!5e0!3m2!1ses-419!2sus!4v1778100939177!5m2!1ses-419!2sus" 
+    width="100%"
+    height="250"
+    style="border:0; border-radius:12px;"
+    allowfullscreen=""
+    loading="lazy"> </iframe>
+    
+</iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!--Seccion contacto-->
+<form action="send.php" method="POST" class="formulario-contacto">
+
+    <!-- TÍTULO -->
+    <h3>Contáctame</h3>
+
+    <!-- NOMBRE -->
+    <label>
+        Nombre completo
+    </label>
+
+    <input type="text"
+           name="nombre"
+           placeholder="Escribe tu nombre completo"
+           class="campo-formulario"
+           required>
+
+    <!-- CORREO -->
+    <label>
+        Correo electrónico
+    </label>
+
+    <input type="email"
+           name="correo"
+           placeholder="Escribe tu correo"
+           class="campo-formulario"
+           required>
+
+    <!-- TELÉFONO -->
+    <label>
+        Número de teléfono
+    </label>
+
+    <input type="number"
+           name="telefono"
+           placeholder="Escribe tu número"
+           class="campo-formulario"
+           required>
+
+    <!-- DIRECCIÓN -->
+    <label>
+        Dirección
+    </label>
+
+    <input type="text"
+           name="direccion"
+           placeholder="Escribe tu dirección"
+           class="campo-formulario">
+
+    <!-- SERVICIO -->
+    <label>
+        Servicio de interés
+    </label>
+
+    <select name="servicio"
+            class="campo-formulario"
+            required>
+
+        <option value="">
+            Selecciona un servicio
+        </option>
+
+        <option value="Desarrollo Web">
+            Desarrollo Web
+        </option>
+
+        <option value="Bases de Datos">
+            Bases de Datos
+        </option>
+
+        <option value="Diseño Web">
+            Diseño Web
+        </option>
+
+        <option value="Asesoría Tecnológica">
+            Asesoría Tecnológica
+        </option>
+
+    </select>
+
+    <!-- FORMA DE CONTACTO -->
+    <label>
+        Medio de contacto preferido
+    </label>
+
+    <br>
+
+    <input type="radio"
+           name="contacto"
+           value="Correo">
+
+    Correo
+
+    <input type="radio"
+           name="contacto"
+           value="Telefono">
+
+    Teléfono
+
+    <br><br>
+
+    <!-- CLIENTE -->
+    <label>
+
+        <input type="checkbox"
+               name="cliente">
+
+        Deseo recibir información sobre proyectos y servicios
+
+    </label>
+
+    <br><br>
+
+    <!-- MENSAJE -->
+    <label>
+        Mensaje
+    </label>
+
+    <textarea name="mensaje"
+              placeholder="Escribe tu mensaje"
+              class="campo-formulario"
+              rows="5"></textarea>
+
+    <!-- BOTÓN -->
+    <button type="submit"
+            class="boton-enviar">
+
+        Enviar Información
+
+    </button>
+
+</form>
+  <!--Footer-->
+
+    <footer class="footer">
+
+        © 2026 Yelsin Yurani Gómez Ruiz - Portafolio Profesional
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
